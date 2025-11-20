@@ -144,7 +144,7 @@ public class ArrCharOps {
      */
     public static long hashCode(char[] arr) {
         // Replace the following statement with your code
-        if(arr.length==0){
+        if(arr == null || arr.length==0){
             return 0;
         }
 
@@ -193,7 +193,6 @@ public class ArrCharOps {
         int len1 = str1.length();
         int len2 = str2.length();
 
-        
         for (int i = 0; i < Math.min(len1, len2); i++) {
             char char1 = str1.charAt(i);
             char char2 = str2.charAt(i);
@@ -205,7 +204,6 @@ public class ArrCharOps {
             }
         }
 
-        
         if (len1 < len2) {
             return -1; 
         } else if (len1 > len2) {
