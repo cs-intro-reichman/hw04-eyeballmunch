@@ -149,9 +149,10 @@ public class ArrCharOps {
         }
 
         long genHash = 0;
+        long base = 7;
 
         for(int i =0 ; i < arr.length ; i++){
-            genHash += (long)arr[i] * Math.pow(7, arr.length - i - 1);
+            genHash = genHash * base + arr[i];
         }
             
         return genHash;
