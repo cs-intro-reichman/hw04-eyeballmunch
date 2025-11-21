@@ -23,13 +23,24 @@ public class Primes {
             
         }
 
-         // Print the primes
         for (int i = 2; i <= N; i++) {
             if (isPrime[i]) {
                 System.out.println(i);
             }
         }
 
+        System.out.println("Prime numbers up to " + N + ":");
+    
+        int count = 0;
+        for (int i = 2; i <= N; i++) {
+            if (isPrime[i]) {
+                System.out.println(i);
+                count++;
+            }
+        }
+        
+        int percentage = (int) Math.round((100.0 * count) / (N - 1));
+        System.out.println("There are " + count + " primes between 2 and " + N + " (" + percentage + "% are primes)");
 
     }
 }
